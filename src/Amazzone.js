@@ -48,7 +48,7 @@ function Main() {
       <nav className='nav-bar'>
         <ul>          
           <li>
-            <Link to="/">Bestseller di Amazon</Link>
+            <Link to="/">Bestseller di Amazzone</Link>
           </li>
           <li>
             <Link to="/Page2">Le novità più interessanti</Link>
@@ -65,7 +65,7 @@ function Main() {
 
 
         </ul>
-        <h2>Bestseller di Amazon</h2>
+        <h2>Bestseller di Amazzone</h2>
         <h4>I nostri prodotti più popolari in base alle vendite. Aggiornamento frequente.</h4>
       </nav>
 
