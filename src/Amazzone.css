@@ -1,9 +1,13 @@
 header{
   display: flex;
   justify-content: space-around;
-  margin-top: 10px;
-  margin-bottom: 20px;
+  padding-top: 10px;
+  background-color: lightcyan;
   
+}
+
+span{
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 li{
@@ -28,8 +32,22 @@ li{
   margin: 10px;
 }
 
+#site-search{
+  margin-left: 10px;
+  margin-right: 5px;
+}
+
 .search-bar button{
   height: 2rem;
+  background-color: bisque;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+.search-bar button:hover{
+  background-color: beige;
+
 }
 
 .cart{
@@ -38,31 +56,140 @@ li{
   cursor: pointer;
   filter: brightness(100%);
   transition: background-color 0.3s ease;
+  border-radius: 10px;
 
+}
+
+
+.cart span{
+  padding-left: 5px;
+  font-weight: bold;
 }
 
 .cart:hover{
   background-color: rgb(167, 172, 181);
   cursor: pointer;
+  color: blueviolet;
 }
 
 .cart img{
   height: 3rem;
   cursor: pointer;
-  
 }
 
 .nav-bar ul {
   display: flex;
   margin: 0px;
   padding-bottom: 10px;
+  padding-top: 20px;
   border-bottom: 2px solid black;
+  background-color: lightcyan;
+
 }
+
+.nav-bar a{
+  color: blue;
+}
+
+.nav-bar a:hover{
+  color: lightseagreen;
+}
+
 
 h2, h4{
   padding-left: 10px;
+  margin: 0px;
+  padding-top:  20px;
+  padding-bottom: 20px;
+  background-color: antiquewhite;
+
 }
 
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: antiquewhite;
+
+}
+
+main div{
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+  align-items: center;
+  width: 200px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: white;
+  
+  
+}
+
+main div:hover{
+  background-color: lightcyan;
+
+
+}
+
+main div h3{
+  display: flex;
+  order: 1;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+#brand{
+  display: flex;
+  order: 3;
+  margin: 0px;
+  font-family: Georgia, serif;
+}
+
+#price{
+
+  display: flex;
+  order: 4;
+  margin: 0px;
+  font-weight: 700;
+
+
+}
+
+#add {
+  display: flex;
+  order: 5;
+  margin-top: 10px;
+  border: 2px solid black;
+  background-color: lightsalmon;
+  border-radius: 10px;
+  cursor: pointer;
+
+
+}
+
+#buy{
+  display: flex;
+  order: 6;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  background-color: greenyellow;
+  border-radius: 10px;
+  cursor: pointer;
+
+
+}
+
+main div img{
+  display: flex;
+  order: 2;
+  width: 10rem;
+  height: 10rem;
+  object-fit: scale-down;
+  cursor: pointer;
+
+}
 
 
 
