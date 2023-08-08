@@ -12,41 +12,41 @@ import Page5 from "./pages/I più regalati";
 function Main() {
   const [products, setProducts] = useState([])
   useEffect(() => {
-      async function fetchProducts () {
-          let res = await fetch ("https://dummyjson.com/products")
-          let json = await res.json ()
-          let products = json.products
-          console.log(json);
-          setProducts (products)
-  
-      }
-      fetchProducts ()
-    } , [])
-    
+    async function fetchProducts() {
+      let res = await fetch("https://dummyjson.com/products")
+      let json = await res.json()
+      let products = json.products
+      console.log(json);
+      setProducts(products)
+
+    }
+    fetchProducts()
+  }, [])
+
   return (
     <>
-      <header>         
+      <header>
         <div className="logo">
-          <img src={imagine} alt="logo Amazon"/>
+          <img src={imagine} alt="logo Amazon" />
         </div>
 
-        <div className="search-bar"> 
-        <label htmlFor="site-search"> <b> Ricerca prodotti:</b></label>
+        <div className="search-bar">
+          <label htmlFor="site-search"> <b> Ricerca prodotti:</b></label>
           <input type="search" id="site-search" name="q" />
 
           <button type="button">Search</button>
         </div>
 
         <div className="cart">
-        <img src={imagine2} alt="logo Amazon"/>
-        <span> Carrello </span>
-        
+          <img src={imagine2} alt="logo Amazon" />
+          <span> Carrello </span>
+
         </div>
 
       </header>
 
       <nav className='nav-bar'>
-        <ul>          
+        <ul>
           <li>
             <Link to="/">Bestseller di Amazzone</Link>
           </li>
@@ -72,18 +72,18 @@ function Main() {
       <main>
 
         {products.map((product) => (
-        <div key={product.id}>
-        <h3>{product.title }</h3>
-        <p id='price'>{product.price}</p>
-        <p id='brand'>{product.brand}</p>
-        <img src={product.images[0]} alt={product.title} />
+          <div key={product.id}>
+            <h3>{product.title}</h3>
+            <p id='price'>{product.price}</p>
+            <p id='brand'>{product.brand}</p>
+            <img src={product.images[0]} alt={product.title} />
 
-          <button id='add' type="button">Aggiungi al carrello</button>
-          <button id='buy' type="button">Acquista ora</button>
+            <button id='add' type="button">Aggiungi al carrello</button>
+            <button id='buy' type="button">Acquista ora</button>
 
 
 
-        </div>
+          </div>
         ))}
 
 
@@ -99,7 +99,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Main />}/>
+        <Route path="/" element={<Main />} />
         <Route path="/Page2" element={<Page2 />} />
         <Route path="/Page3" element={<Page3 />} />
         <Route path="/Page4" element={<Page4 />} />
